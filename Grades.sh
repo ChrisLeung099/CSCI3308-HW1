@@ -1,5 +1,4 @@
 #!/bin/bash
-
 # Parth Mishra Chris Leung - HW1
 
 
@@ -9,10 +8,6 @@ then
 	echo "Usage: Grades.sh filename"
 	exit 1
 fi
-
-# Sort the input file based on hierarchy: 1. Last Name 2. First Name 3. Student ID
-
-echo "test"
 
 # Ouput the sorted input
 while read a b c d e f;
@@ -25,8 +20,9 @@ do
 	echo "$q [$a] $c, $b"
 
 # added comment
+done < data.txt | sort -k3
 
-done < data.txt
+
 
 
 
