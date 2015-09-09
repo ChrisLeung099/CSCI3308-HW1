@@ -2,6 +2,7 @@
 # Parth Mishra Chris Leung - HW1
 
 
+
 # Usage Warning
 if [ $# -ne 1 ]
 then 
@@ -9,7 +10,9 @@ then
 	exit 1
 fi
 
-# Ouput the sorted input
+filename="$1"
+
+# read in the input data to generate the grade average
 while read a b c d e f;
 do
  	x=d
@@ -19,8 +22,8 @@ do
 	q=$((p/3))
 	echo "$q [$a] $c, $b"
 
-# added comment
-done < data.txt | sort -k3
+
+done < "$filename" | sort -k3 -k2  # sort the output data according to last name
 
 
 
